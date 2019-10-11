@@ -1,0 +1,1 @@
+This simple web app uses HTML, CSS, Javascript and Jquery to allow users to create their own To-Do list. They can add, remove and check items off the list.

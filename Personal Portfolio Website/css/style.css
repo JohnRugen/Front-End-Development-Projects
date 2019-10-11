@@ -1,0 +1,52 @@
+/*.navbar-light .navbar-brand{
+    color: green;
+}*/
+
+body, html{
+    height: 100%;
+    background-color: #ddc4b0;
+    overflow-x: hidden;
+}
+
+.bg{
+    background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ), url('../imgs/RipRoad.JPG');
+
+    height: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.MyCirclePhoto
+{
+    height: 40%;
+    border-radius: 50%;
+    margin: auto;
+    border: 6px solid black;
+}
+
+.MyCircleCard
+{
+    width: 18rem; 
+    height: 18rem; 
+    border: none; 
+    background-color: rgba(245, 245, 245, 0.0);
+}
+
+.ScrollButton{
+    display: block;
+    margin: auto;
+    color: white;   
+}
+
+.MyTitle{
+    color:white;
+    font-weight: 350;
+}
+

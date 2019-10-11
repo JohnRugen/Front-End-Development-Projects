@@ -1,0 +1,107 @@
+body{
+    font-family: 'Quicksand', sans-serif;
+    /* Got from: uigradients.com */
+    background: #3a6186;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #89253e, #3a6186);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #89253e, #3a6186); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+#container{
+    
+    width: 360px;
+    background-color: #f7f7f7;
+    margin: 100px auto; /* 100px on top and bottom, auto for left & right (mid page ) */
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+h1{
+    background: #2980b9;
+    color: white;
+    margin: 0;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+input{
+    font-size: 18px;
+    background-color: #f7f7f7;
+    /* Spans the whole container, border box takes into accoutn the padding, otherwise it will be slightly too large */
+    width: 100%; 
+    box-sizing: border-box;
+    padding: 13px 13px 13px 20px;
+    color: #2980b9;
+    border: 3px solid rgba(0, 0, 0, 0);
+}
+
+input:focus{
+    background-color: white;
+    border: 3px solid #2980b9;
+    outline: none;
+}
+
+ul{
+    list-style: none; /* Removes bullet points */
+    margin: 0;
+    padding: 0%;
+}
+
+li{
+    background: #fff;
+    height: 40px;
+    line-height: 40px;
+}
+
+/*2n is every other child, 3n would be every third */
+li:nth-child(2n)
+{
+    background: #f7f7f7;
+}
+
+
+/* When hovering over an li, adjust span*/
+li:hover span{
+    width: 40px;
+    opacity: 1.0;
+}
+
+span{
+    background-color: #e74c3c;
+    height: 40px;
+    margin-right: 20px;
+    text-align: center;
+    color: white;
+    width: 0px;
+    display: inline-block;
+    transition: 0.20s linear;
+    opacity: 0;
+}
+
+.fa-plus{
+    float: right;
+    padding-top: 3px;
+}
+
+.completed{
+    color: grey;
+    text-decoration: line-through;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
