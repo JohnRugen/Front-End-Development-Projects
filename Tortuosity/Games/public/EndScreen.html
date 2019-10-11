@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyBP56IQWco-D74KRxukhR_PCC-fzF8GFSo",
+        authDomain: "tortuositymmu.firebaseapp.com",
+        databaseURL: "https://tortuositymmu.firebaseio.com",
+        projectId: "tortuositymmu",
+        storageBucket: "tortuositymmu.appspot.com",
+        messagingSenderId: "170012253514"
+    };
+    firebase.initializeApp(config);
+    var myDatabase = firebase.database();
+</script>
+
+
+<head>
+    <title>Quiz Over!</title> 
+    <link rel="stylesheet" href="style.css">
+    <script src="EndScreenController.js"></script>
+    <div id="headerBar"></div>
+</head>
+
+<body onload="showLeaderboard()">
+
+        
+        <div class="login-page">
+            <div class="form">
+                <form class="login-form">
+                        <div class = "ConnectedPlayers">
+                                <ul id="Scores">
+                                        Scores:
+                                </ul>
+                                
+                            </div>
+                    <br></br>
+                    <button id="Answer1" type="button" onclick="changePage('index.html')">Return to Homescreen</button>
+                    <br></br>
+                    <button id="Answer2" type="button" onclick="changePage('Settings.html')">Return to Game Settings</button>
+                    <br></br>
+                </form>
+            </div>
+        </div>
+    
+    </body>
+
+</html>

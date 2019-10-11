@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyBP56IQWco-D74KRxukhR_PCC-fzF8GFSo",
+        authDomain: "tortuositymmu.firebaseapp.com",
+        databaseURL: "https://tortuositymmu.firebaseio.com",
+        projectId: "tortuositymmu",
+        storageBucket: "tortuositymmu.appspot.com",
+        messagingSenderId: "170012253514"
+    };
+    firebase.initializeApp(config);
+    var myDatabase = firebase.database();
+</script>
+
+
+<head>
+    <title>Tortuosity Quiz - Student View</title> 
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery.js"></script>
+    <script src="studentController.js"></script>
+    <div id="headerBar">test</div>
+</head>
+
+<body onload="studentLogicStart()">
+    
+        <div class="login-page">
+            <div class="form">
+                <form class="login-form">
+                    <p id = timer> 0</p>
+                    <p id = questionText>Loading!</p>
+                    <br></br>
+                    <input type="text" name ="roomKey" id="roomKey">
+                    <br></br>
+                    <button id="submitRoomKey" type="button" onclick="connectToRoom()">Submit Room Key</button>
+                    <br></br>
+                    <button id="Answer1" type="button" onclick="checkIfGameIsRunningAndAnswer(id)">Loading..</button>
+                    <br></br>
+                    <button id="Answer2" type="button" onclick="checkIfGameIsRunningAndAnswer(id)">Loading..</button>
+                    <br></br>
+                    <button id="Answer3" type="button" onclick="checkIfGameIsRunningAndAnswer(id)">Loading..</button>
+                    <br></br>
+                    <input type="text" name ="tAnswer" id="textAnswer">
+                    <br></br>
+                    
+                    <button id="submitAnswer" type="button" onclick="checkTextAnswer()">Submit</button>
+                    <!--
+                    <button id="Ready" type="button" onclick="loadQuestions()">Ready!</button> -->
+                </form>
+            </div>
+        </div>
+    
+    </body>
+
+</html>

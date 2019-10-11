@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyBP56IQWco-D74KRxukhR_PCC-fzF8GFSo",
+        authDomain: "tortuositymmu.firebaseapp.com",
+        databaseURL: "https://tortuositymmu.firebaseio.com",
+        projectId: "tortuositymmu",
+        storageBucket: "tortuositymmu.appspot.com",
+        messagingSenderId: "170012253514"
+    };
+    firebase.initializeApp(config);
+    var myDatabase = firebase.database();
+</script>
+
+<!-- Linking stylesheet, controllers(javascript) and adding some meta data-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Tortuosity Quiz</title>
+    <meta name="description" content="Tortuosity Quiz">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="hostStyle.css">
+    <script src="jquery.js"></script>
+    <script src="hostController.js"></script>
+    <!--<div id="headerBar">Room Code: </div> -->
+    <audio id="quizMusic">
+        <source src="TortuosityMusic.ogg" type="audio/ogg">
+    </audio>
+
+
+</head>
+
+<body onload="onLoad()">
+    <!-- Player knocked out alert -->
+    <div id="alert-area" class="alert-area"></div>
+    </div>
+    <div class="GameInfo" id="RoomCode">
+        RoomCode = 500
+    </div>
+    <div class = "ConnectedPlayers">
+        <ul id="PlayerList">
+                ConnectedPlayers
+        </ul>
+        
+    </div>
+    <div class = "KnockedPlayers">
+        <ul id="KnockedList">
+                
+        </ul>
+        
+    </div>
+    <!-- unordered list ID grid | Hexes-->
+    <ul id="grid" class="clear">  
+        <li>
+            <div class="hexagon" id="1">
+                <!-- player spots
+                    <span class="user position-1"></span>
+                    <span class="user position-2"></span>
+                    <span class="user position-3"></span>
+                    <span class="user position-4"></span>
+                    <span class="user position-5"></span>
+                    <span class="user position-6"></span>
+                    <span class="user position-7"></span>
+                    <span class="user position-8"></span>
+                    <span class="user position-9"></span>
+                    <span class="user position-10"></span>
+                -->
+                <div class="hot-container">
+                    <p>
+                        <a href="#" class="btn btn-green" button onclick="myFunction(1)">E</a>
+                    </p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="hexagon" id="2">
+                <div class="hot-container">
+                    <p>
+                        <a href="#" class="btn btn-red" button onclick="myFunction(2)">M</a>
+                    </p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="hexagon" id="3">
+                <div class="hot-container">
+                    <p>
+                        <a href="#" class="btn btn-green" button onclick="myFunction(3)">M</a>
+                    </p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="hexagon" id="4">
+                <div class="hot-container">
+                    <p>
+                        <a href="#" class="btn btn-red" button onclick="myFunction(4)">D</a>
+                    </p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="hexagon" id="5">
+                <div class="hot-container">
+                    <p>
+                        <a href="#" class="btn btn-green" button onclick="myFunction(5)">V</a>
+                    </p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="hexagon" id="6">
+                <div class="hot-container">
+                    <p>
+                        <a href="#" class="btn btn-red" button onclick="myFunction(6)">L</a>
+                    </p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="hexagon" id="7">
+                <div class="hot-container">
+                    <p>
+                        <a href="#" class="btn btn-red" button onclick="myFunction(7)">J</a>
+                    </p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="hexagon" id="8">
+                <div class="hot-container">
+                    <p>
+                        <a href="#" class="btn btn-green" button onclick="myFunction(8)">S</a>
+                    </p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="hexagon" id="9">
+                <div class="hot-container">
+                    <p>
+                        <a href="#" class="btn btn-red" button onclick="myFunction(9)">A</a>
+                    </p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="hexagon" id="10">
+                <div class="hot-container">
+                    <p>
+                        <a href="#" class="btn btn-green" button onclick="myFunction(10)">M</a>
+                    </p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="hexagon" id="11">
+                <div class="hot-container">
+                    <p>
+                        <a href="#" class="btn btn-red" button onclick="myFunction(11)">V</a>
+                    </p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="hexagon" id="12">
+                <div class="hot-container">
+                    <p>
+                        <a href="#" class="btn btn-green" button onclick="myFunction(12)">A</a>
+                    </p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="hexagon" id="13">
+                <div class="hot-container">
+                    <p>
+                        <a href="#" class="btn btn-red" button onclick="myFunction(13)">Finish!</a>
+                    </p>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+</body>
+
+</html>

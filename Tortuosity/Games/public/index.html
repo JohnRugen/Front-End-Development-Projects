@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+
+<script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyBP56IQWco-D74KRxukhR_PCC-fzF8GFSo",
+        authDomain: "tortuositymmu.firebaseapp.com",
+        databaseURL: "https://tortuositymmu.firebaseio.com",
+        projectId: "tortuositymmu",
+        storageBucket: "tortuositymmu.appspot.com",
+        messagingSenderId: "170012253514"
+    };
+    firebase.initializeApp(config);
+    var myDatabase = firebase.database();
+</script>
+
+
+<head>
+    <!-- Linking stylesheet and javascript -->
+    <link rel="stylesheet" href="style.css">
+    <script src="navigation.js"></script>
+    <meta charset="utf-8" />
+
+</head>
+
+<body onload ="LoadFunction()">
+    <!-- Create a form, with two buttons allowing the user to go to designated area-->
+    <div class="login-page">
+        <div class="form">
+            <form class="login-form">
+                <p id = "Title"></p>
+                <input id="Username" type="text" placeholder="MyUsername">
+                <button id="LoginBtn" type="button" onclick="signIn()">Play!</button>
+                <button id="LogOutBtn" type="button" class="btn btn-action hide" onclick="logOut()">Log Out</button>
+                <br></br>
+                <button id="HostView" type="button" onclick="hostView()">Teacher</button>
+                <button id="StudentView" type="button" onclick="studentView()">Student</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

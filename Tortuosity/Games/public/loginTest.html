@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+
+<!-- Initialize firebase-->
+<script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyBP56IQWco-D74KRxukhR_PCC-fzF8GFSo",
+        authDomain: "tortuositymmu.firebaseapp.com",
+        databaseURL: "https://tortuositymmu.firebaseio.com",
+        projectId: "tortuositymmu",
+        storageBucket: "tortuositymmu.appspot.com",
+        messagingSenderId: "170012253514"
+    };
+    firebase.initializeApp(config);
+    var myDatabase = firebase.database();
+</script>
+
+
+<head>
+    <title>Tortuosity Quiz - Student View</title> 
+    <link rel="stylesheet" href="style.css">
+    <script src="TestController.js"></script>
+    <div id="headerBar"></div>
+</head>
+
+
+<body onload ="loadFunction()">
+    <!-- Create a form, with two buttons allowing the user to go to designated area-->
+    <div class="login-page">
+        <div class="form">
+            <form class="login-form">
+                <input id ="Email" type = "email" placeholder = "Example@Example.com">
+                <br></br>
+                <input id ="Password" type = "password" placeholder = "*********">
+                <br></br>
+                <button id="LoginBtn" type="button" onclick="test()">Log In</button>
+                <button id="SignupBtn" type="button" onclick="testSign()">Sign Up</button>
+                <button id ="LogOutBtn" type ="button" class = "btn btn-action hide" onclick="LogOut()">Sign Out</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+
+
+</html>
