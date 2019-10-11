@@ -3,8 +3,7 @@ This repo includes my front end development projects.
 Technology Used:
 - HTML
 - CSS
-- Javascript
-- Jquery
+- Javascript / Jquery / Paper.js / Howler.js
 - Bootstrap 4
 - Firebase
 - Visual Studio Code
@@ -22,3 +21,6 @@ This is a web based quiz app for geology students. It was created within my fina
 to connect, I'm placing it in the front end repo. This is because I used Firebase to handle the database. I thoroughly enjoyed creating this application at university.
 More information and documentation can be found within the project.
 
+Patatap Clone:
+
+A very simple project that helped me understand Paper.js and Howler.Js. Each key press creates a circle with a random sound & colour.

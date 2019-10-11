@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Patatap Clone</title>
+    <link rel="stylesheet" type="text/css" a href="assets/css/style.css">
+    <script src="assets/js/paper-full.js"></script>
+    <script src="assets/js/howler.core.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    <!-- Define inlined PaperScript associate it with myCanvas -->
+    <script type="text/paperscript" canvas="myCanvas">
+
+    var circles = [];
+
+    function onKeyDown(event)
+    {
+        if(keyData[event.key]){ // If a valid key has been pressed
+            createCircle(keyData[event.key]);
+        }
+        else
+        {
+            createCircle(defaultCircle);
+        }
+
+    }
+
+
+    // Create circle function, takes in circles data
+    function createCircle(data)
+    {
+        var maxPoint = new Point(view.size.width, view.size.height); // Max point of browser window
+        var randomPoint = Point.random(); // grabs a random point value (x/y vals) between 0 and 0.999
+        var point = maxPoint * randomPoint; // multiplies by point
+
+        // Create the circle, using the key datas elements 
+        var newCircle = new Path.Circle(new Point(point, point), 500);
+        newCircle.fillColor = data.color
+        data.sound.play();
+
+        // Push circle to the array
+        circles.push(newCircle);
+    }
+
+    // Every frame
+    function onFrame(event){
+        for(var i = 0; i <circles.length; i++) // Loop through the circle array
+        {
+            circles[i].fillColor.hue +=1; // Change hue every frame
+            circles[i].scale(0.9); // scale circle every frame
+            
+            if(circles[i].area < 1) // Once the circles area is small enough
+            {
+            circles[i].remove(); // remove the circle from the canvas
+            circles.splice(i, 1); // remove the circle from the array
+            }
+        }
+    }
+
+</script>
+
+</head>
+
+<body>
+
+    <canvas id="myCanvas" resize></canvas>
+
+</body>
+
+</html>
